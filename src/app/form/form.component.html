@@ -1,0 +1,5 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="nome Autore" formControlName="nomeAutore">
+    <textarea name="contenuto" placeholder="contenuto" id="contenuto" formControlName="contenuto"></textarea>
+    <button type="submit"></button>
+</form>

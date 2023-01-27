@@ -3,3 +3,5 @@ export interface Post {
     nomeAutore: string,
     contenuto: string
 }
+
+export type NewPost = Omit<Post, 'id'>

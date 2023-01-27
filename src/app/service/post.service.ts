@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Post } from '../model/post';
+import { NewPost, Post } from '../model/post';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,18 @@ export class PostService {
     },
   ]
 
+  private lastId = 4;
+
   getPosts() {
     return this.posts.slice();
+  }
+
+  addPost(post: NewPost) {
+    const newPost = {
+      id: this.lastId++,
+      ...post,
+    };
+
+    this.posts.push(newPost);
   }
 }
