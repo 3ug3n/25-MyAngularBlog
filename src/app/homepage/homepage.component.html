@@ -1,0 +1,17 @@
+<table>
+    <thead>
+      <tr>
+        <th>Posts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of posts">
+        <td>
+          {{ p.nomeAutore }}
+        </td>
+        <td>
+          {{p.contenuto}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
